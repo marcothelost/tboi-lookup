@@ -8,4 +8,5 @@ export interface Item {
   quality: number;
   active: boolean;
   charges: number | null;
+  chargeInSeconds: boolean;
 }

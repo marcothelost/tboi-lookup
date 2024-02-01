@@ -20,6 +20,7 @@
       "@pages/*": ["./src/pages/*"],
       "@layouts/*": ["./src/layouts/*"],
       "@components/*": ["./src/components/*"],
+      "@data/*": ["./src/data/*"],
       "@utils/*": ["./src/utils/*"],
       "@typings/*": ["./src/typings/*"],
       "@styles/*": ["./src/styles/*"]

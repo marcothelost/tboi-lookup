@@ -1,4 +1,7 @@
 .item-grid {
+  display: flex;
+  flex-wrap: wrap;
+
   &__box {
     width: 32px;
     height: 32px;

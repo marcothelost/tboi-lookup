@@ -9,6 +9,7 @@ export default defineConfig({
       '@pages': path.resolve(__dirname, './src/pages'),
       '@layouts': path.resolve(__dirname, './src/layouts'),
       '@components': path.resolve(__dirname, './src/components'),
+      '@data': path.resolve(__dirname, './src/data'),
       '@utils': path.resolve(__dirname, './src/utils'),
       '@typings': path.resolve(__dirname, './src/typings'),
       '@styles': path.resolve(__dirname, './src/styles'),

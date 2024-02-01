@@ -16,6 +16,7 @@ export const ItemGrid: React.FC<Props> = ({ items }) => (
               style={{
                 backgroundPositionX: -(item.itemId - 1) * 32,
               }}
+              title={item.name}
             />
           </div>
         ))
