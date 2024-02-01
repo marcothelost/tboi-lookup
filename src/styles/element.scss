@@ -1,0 +1,13 @@
+.item-grid {
+  &__box {
+    width: 32px;
+    height: 32px;
+
+    &__image {
+      width: 32px;
+      height: 32px;
+      background-image: url('/repentance-items.png');
+      background-size: cover;
+    }
+  }
+}

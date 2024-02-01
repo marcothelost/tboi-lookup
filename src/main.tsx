@@ -6,6 +6,7 @@ import { App } from './App.tsx';
 
 import '@styles/reset.scss';
 import '@styles/main.scss';
+import '@styles/element.scss';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
