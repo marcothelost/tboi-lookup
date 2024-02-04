@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 
 import { PageNavigation } from '@components/blocks/PageNavigation';
+import { PageAside } from '@components/blocks/PageAside';
 import { PageFooter } from '@components/blocks/PageFooter';
 
 import { PAGE_TITLE_BASE, PAGE_TITLE_SPLITTER } from '@utils/route';
@@ -18,7 +19,8 @@ export const DefaultLayout: React.FC<Props> = ({ children, title }) => {
   return (
     <React.Fragment>
       <PageNavigation />
-      {children}
+      <PageAside />
+      <main className="page-content">{children}</main>
       <PageFooter />
     </React.Fragment>
   );

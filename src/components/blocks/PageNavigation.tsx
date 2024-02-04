@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { AppRoute } from '@utils/route';
 
 export const PageNavigation: React.FC = () => (
-  <nav>
+  <nav className="page-navigation">
     <h2>Page Navigation</h2>
     <ul>
       <li>

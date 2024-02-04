@@ -1,0 +1,17 @@
+.item-grid {
+  display: flex;
+  flex-wrap: wrap;
+
+  &__box {
+    width: 32px;
+    height: 32px;
+
+    &__image {
+      width: 32px;
+      height: 32px;
+      background-image: url('/repentance-items.png');
+      background-size: cover;
+      cursor: pointer;
+    }
+  }
+}
