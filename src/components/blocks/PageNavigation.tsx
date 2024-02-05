@@ -8,9 +8,8 @@ import { AppRoute } from '@utils/route';
 export const PageNavigation: React.FC = () => (
   <nav className="page-navigation">
     <ContentWrapper>
-      <h2>Page Navigation</h2>
-      <ul>
-        <li>
+      <ul className="page-navigation__items">
+        <li className="page-navigation__item">
           <Link to={AppRoute.HOME}>Home</Link>
         </li>
       </ul>

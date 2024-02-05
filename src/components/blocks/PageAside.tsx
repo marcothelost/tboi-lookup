@@ -19,15 +19,25 @@ export const PageAside: React.FC = () => {
     <aside className="page-aside">
       {selectedItem ? (
         <React.Fragment>
-          <h4>{selectedItem.name}</h4>
-          <p>{selectedItem.quote}</p>
-          <ul>
-            <li>Type: {selectedItem.active ? 'Active' : 'Passive'}</li>
-            <li>Quality: {selectedItem.quality}</li>
-            {selectedItem.active ? (
-              <li>Charges: {selectedItem.charges}</li>
-            ) : null}
-          </ul>
+          {(selectedItem.active &&
+            !selectedItem.chargeInSeconds &&
+            selectedItem.charges) ||
+          0 > 0 ? (
+            <div className="page-aside__charges">
+              {Array.from({ length: selectedItem.charges || 0 }, (_, index) => (
+                <div key={index} className="page-aside__charges__bar" />
+              ))}
+            </div>
+          ) : null}
+          <div
+            className="page-aside__item"
+            style={{
+              backgroundPositionX: -(selectedItem.itemId - 1) * 64,
+            }}
+            title={selectedItem.name}
+          />
+          <h4 className="page-aside__title">{selectedItem.name}</h4>
+          <p className="page-aside__description">{selectedItem.quote}</p>
           <ul>
             {Object.keys(selectedItem.texts).map((key, index) =>
               selectedItem.texts[key as keyof Item['texts']] ? (

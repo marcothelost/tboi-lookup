@@ -19,11 +19,56 @@
   margin-bottom: 2.4rem;
 }
 
+.page-navigation {
+  margin-bottom: 2.4rem;
+  padding: 1.2rem 0;
+  background-color: $component-background;
+  border-bottom: 1px solid $component-border;
+
+  &__items {
+    display: flex;
+  }
+}
+
 .page-aside {
   position: sticky;
   top: 2.4rem;
+  padding: 1.2rem;
   width: 28rem;
   height: max-content;
+  background-color: $component-background;
+  border: 1px solid $component-border;
+  border-radius: 0.4rem;
+
+  &__charges {
+    display: flex;
+    gap: 0.6rem;
+    margin-bottom: 0.8rem;
+
+    &__bar {
+      flex: 1;
+      height: 2px;
+      background-color: $primary;
+    }
+  }
+
+  &__item {
+    margin-bottom: 1.2rem;
+    width: 64px;
+    height: 64px;
+    background-image: url('/repentance-items.png');
+    background-size: cover;
+  }
+
+  &__title {
+    font-size: 1.5rem;
+  }
+
+  &__description {
+    margin-bottom: 0.4rem;
+    font-size: 1.3rem;
+    opacity: 0.9;
+  }
 }
 
 .page-content {
