@@ -20,7 +20,10 @@
 }
 
 .page-aside {
-  width: 24rem;
+  position: sticky;
+  top: 2.4rem;
+  width: 28rem;
+  height: max-content;
 }
 
 .page-content {

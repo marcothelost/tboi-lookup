@@ -17,8 +17,6 @@ export const PageAside: React.FC = () => {
 
   return (
     <aside className="page-aside">
-      <h2>Page Aside</h2>
-      <h3>Selected Item</h3>
       {selectedItem ? (
         <React.Fragment>
           <h4>{selectedItem.name}</h4>

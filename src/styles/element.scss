@@ -3,15 +3,19 @@
   flex-wrap: wrap;
 
   &__box {
-    width: 32px;
-    height: 32px;
+    transition: transform 0.1s;
 
     &__image {
-      width: 32px;
-      height: 32px;
+      padding: 0.8rem;
+      width: 36px;
+      height: 36px;
       background-image: url('/repentance-items.png');
       background-size: cover;
       cursor: pointer;
+    }
+
+    &:hover {
+      transform: scale(1.5) rotate(10deg);
     }
   }
 }

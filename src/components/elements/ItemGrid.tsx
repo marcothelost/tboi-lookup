@@ -24,7 +24,7 @@ export const ItemGrid: React.FC<Props> = ({ items }) => {
               <div
                 className="item-grid__box__image"
                 style={{
-                  backgroundPositionX: -(item.itemId - 1) * 32,
+                  backgroundPositionX: -(item.itemId - 1) * 36,
                 }}
                 title={item.name}
                 onClick={() => handleSelect(item.itemId)}
