@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react';
 
-import { DefaultLayout } from '@layouts/DefaultLayout';
+import { ItemLayout } from '@layouts/ItemLayout';
 
 import { Icon } from '@components/elements/Icon';
 import { ItemGrid } from '@components/elements/ItemGrid';
@@ -20,7 +20,7 @@ export const HomePage: React.FC = () => {
   );
 
   return (
-    <DefaultLayout title="Home">
+    <ItemLayout title="Home">
       <h1>Home</h1>
       <Icon name="home" />
       <h2>Items</h2>
@@ -28,6 +28,6 @@ export const HomePage: React.FC = () => {
       <ItemGrid items={activeItems} />
       <h3>Passive Items</h3>
       <ItemGrid items={passiveItems} />
-    </DefaultLayout>
+    </ItemLayout>
   );
 };
