@@ -1,0 +1,21 @@
+@import 'color';
+
+body::-webkit-scrollbar {
+  width: 4px;
+}
+
+body::-webkit-scrollbar-track {
+  background: $scrollbar-track;
+  border-radius: 2px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: $primary;
+  border-radius: 3px;
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  body {
+    scrollbar-color: $primary $scrollbar-track;
+  }
+}

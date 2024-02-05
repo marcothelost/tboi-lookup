@@ -11,6 +11,7 @@ import '@styles/reset.scss';
 import '@styles/main.scss';
 import '@styles/element.scss';
 import '@styles/layout.scss';
+import '@styles/scrollbar.scss';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
