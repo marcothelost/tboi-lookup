@@ -6,6 +6,7 @@ import { Button } from '@components/elements/Button';
 import ITEM_DATA from '@data/item.json';
 
 import { getDlcImage } from '@utils/dlc';
+import { WIKI_PAGE_BASE_URL } from '@utils/constants';
 
 import type { RootState } from '@store/base';
 import type { Item } from '@typings/item';
@@ -54,7 +55,11 @@ export const PageAside: React.FC = () => {
               ) : null;
             })}
           </ul>
-          <Button text="Wiki" icon="book" />
+          <Button
+            text="Wiki"
+            icon="book"
+            link={`${WIKI_PAGE_BASE_URL}${selectedItem.wikiLink}`}
+          />
         </React.Fragment>
       ) : (
         <p>You haven&apos;t selected an item yet.</p>

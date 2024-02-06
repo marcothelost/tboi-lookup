@@ -10,16 +10,17 @@ export interface Item {
   active: boolean;
   charges: number | null;
   chargeInSeconds: boolean;
-  texts: {
-    base: string | null;
-    dlc1: string | null;
-    dlc2: string | null;
-    dlc3: string | null;
-    dlc6: string | null;
-    dlc7: string | null;
-    dlc8: string | null;
-    dlc12: string | null;
-    dlc13: string | null;
-    dlc14: string | null;
-  };
+  texts: Partial<{
+    base: string;
+    dlc1: string;
+    dlc2: string;
+    dlc3: string;
+    dlc6: string;
+    dlc7: string;
+    dlc8: string;
+    dlc12: string;
+    dlc13: string;
+    dlc14: string;
+  }>;
+  wikiLink: string;
 }
