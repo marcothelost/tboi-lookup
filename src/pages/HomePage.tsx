@@ -2,7 +2,6 @@ import React, { useMemo } from 'react';
 
 import { ItemLayout } from '@layouts/ItemLayout';
 
-import { Icon } from '@components/elements/Icon';
 import { ItemGrid } from '@components/elements/ItemGrid';
 
 import ITEM_DATA from '@data/item.json';
@@ -22,7 +21,6 @@ export const HomePage: React.FC = () => {
   return (
     <ItemLayout title="Home">
       <h1>Home</h1>
-      <Icon name="home" />
       <h2>Items</h2>
       <h3>Active Items</h3>
       <ItemGrid items={activeItems} />

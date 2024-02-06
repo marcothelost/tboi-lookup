@@ -1,6 +1,8 @@
 import React, { useMemo } from 'react';
 import { useSelector } from 'react-redux';
 
+import { Button } from '@components/elements/Button';
+
 import ITEM_DATA from '@data/item.json';
 
 import { getDlcImage } from '@utils/dlc';
@@ -32,22 +34,27 @@ export const PageAside: React.FC = () => {
           <div
             className="page-aside__item"
             style={{
-              backgroundPositionX: -(selectedItem.itemId - 1) * 64,
+              backgroundPositionX: -(selectedItem.itemId - 1) * 62,
             }}
             title={selectedItem.name}
           />
           <h4 className="page-aside__title">{selectedItem.name}</h4>
           <p className="page-aside__description">{selectedItem.quote}</p>
-          <ul>
-            {Object.keys(selectedItem.texts).map((key, index) =>
-              selectedItem.texts[key as keyof Item['texts']] ? (
-                <li key={index}>
+          <ul className="page-aside__texts">
+            {Object.keys(selectedItem.texts).map((key, index) => {
+              const text = selectedItem.texts[key as keyof Item['texts']];
+              return text ? (
+                <li
+                  key={index}
+                  className={`page-aside__text page-aside__text--${key}`}
+                >
                   {getDlcImage(key)}
-                  {selectedItem.texts[key as keyof Item['texts']]}
+                  <span>{selectedItem.texts[key as keyof Item['texts']]}</span>
                 </li>
-              ) : null
-            )}
+              ) : null;
+            })}
           </ul>
+          <Button text="Wiki" icon="book" />
         </React.Fragment>
       ) : (
         <p>You haven&apos;t selected an item yet.</p>

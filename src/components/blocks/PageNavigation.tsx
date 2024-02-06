@@ -10,7 +10,9 @@ export const PageNavigation: React.FC = () => (
     <ContentWrapper>
       <ul className="page-navigation__items">
         <li className="page-navigation__item">
-          <Link to={AppRoute.HOME}>Home</Link>
+          <Link className="page-navigation__link" to={AppRoute.HOME}>
+            Home
+          </Link>
         </li>
       </ul>
     </ContentWrapper>
